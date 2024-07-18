@@ -1,0 +1,11 @@
+.HyperMD-codeblock.cm-line
+, code[class*="language-"]
+, pre[class*="language-"]
+{
+    white-space: pre;
+    overflow-x: scroll;
+}
+
+code[class*="language-output"]{
+    height: 350px;
+}
