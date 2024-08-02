@@ -1,0 +1,58 @@
+div:has(> table) {
+    max-height: 300px;
+    overflow-y: auto;
+    position: relative;
+  }
+  
+  table {
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 100%;
+  }
+  
+  table thead {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    background-color: var(--background-secondary);
+  }
+  
+  table th, table td {
+    padding: 8px;
+    border: 1px solid var(--background-modifier-border);
+  }
+  
+  table th {
+    background-color: var(--background-secondary);
+  }
+  
+  /* Ensure all header cells have the same background */
+  table thead th {
+    background-color: var(--background-secondary) !important;
+  }
+  
+  table thead::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -1px;
+    bottom: 0;
+    background-color: var(--background-secondary);
+    z-index: -1;
+  }
+  
+  table thead::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -1px;
+    height: 2px;
+    background-color: var(--background-modifier-border);
+  }
+  
+  table tbody {
+    position: relative;
+    z-index: 0;
+  }
